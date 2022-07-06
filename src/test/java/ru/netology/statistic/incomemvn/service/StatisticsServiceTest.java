@@ -17,4 +17,17 @@ public class StatisticsServiceTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxNotFirst() {             /*счетчик Branch*/
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {3, 5, 8, 1, 7, 3, 5, 4, 11, 10, 5};
+        long expected = 11;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
+
 }
